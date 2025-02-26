@@ -1,35 +1,35 @@
-name: Run Jest Tests # Назва пайплайну
+name: Run Jest Tests
 
 on:
   push:
-    branches: [main] # Запускати тести при пуші в main
+    branches: [main]
   pull_request:
-    branches: [main] # Запускати тести при PR у main
+    branches: [main]
   schedule:
-    - cron: "0 6 * * *" # Запускати щодня о 6 ранку (UTC)
+    - cron: "0 6 * * *" # Запуск щодня о 6 ранку (UTC)
 
 jobs:
   test:
-    runs-on: ubuntu-latest # Віртуальна машина для запуску
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository # Клонування репозиторію
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Оновлена версія
 
-      - name: Set up Node.js # Встановлення Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies # Встановлення npm пакетів
+      - name: Install dependencies
         run: npm install
 
-      - name: Run Jest tests # Запуск Jest тестів
+      - name: Run Jest tests
         run: npm test
 
-      - name: Upload test results (optional)
-  if: always()
-  uses: actions/upload-artifact@v4
-  with:
-    name: jest-results
-    path: jest-results.xml
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jest-results
+          path: jest-results.xml
