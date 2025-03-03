@@ -23,6 +23,25 @@ describe("JSONPlaceholder API Tests", () => {
     expect(response.data.company.bs).toBe("harness real-time e-markets");
   });
 
+  test.each([
+    [1, "Leanne Graham", "harness real-time e-markets"],
+    [2, "Ervin Howell", "synergize scalable supply-chains"],
+    [3, "Clementine Bauch", "e-enable strategic applications"],
+  ])(
+    "GET /users/%i returns correct data",
+    async (userId, expectedName, expectedBS) => {
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/users/${userId}`
+      );
+      expect(response.status).toBe(200);
+      expect(response.headers["content-type"]).toBe(
+        "application/json; charset=utf-8"
+      );
+      expect(response.data.name).toBe(expectedName);
+      expect(response.data.company.bs).toBe(expectedBS);
+    }
+  );
+
   test("POST Submit a new blog post", async () => {
     const requestBody = {
       userId: 1,
