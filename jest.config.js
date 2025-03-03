@@ -8,5 +8,5 @@ module.exports = {
     ],
   ],
   coverageDirectory: "coverage",
-  roots: ["<rootDir>/", "<rootDir>/API-tests"],
+  roots: ["<rootDir>/tests", "<rootDir>/test/API-tests"],
 };

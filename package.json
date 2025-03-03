@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:unit": "jest --roots='./' --coverage",
-    "test:api": "jest --roots='./API-tests' --coverage"
+    "test:unit": "jest --roots='./tests/Jest' --coverage",
+    "test:api": "jest --roots='./tests/API-tests' --coverage"
   },
   "author": "",
   "license": "ISC",
