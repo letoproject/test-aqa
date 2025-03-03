@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
     "test:unit": "jest --roots='./tests/Jest' --coverage",
     "test:api": "jest --roots='./tests/API-tests' --coverage"
   },
