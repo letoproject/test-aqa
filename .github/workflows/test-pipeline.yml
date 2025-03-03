@@ -24,8 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Jest tests
-        run: npm test
+      - name: Run Unit tests
+        run: npm run test:unit
+
+      - name: Run API tests
+        run: npm run test:api
 
       - name: Upload test results
         if: always()
