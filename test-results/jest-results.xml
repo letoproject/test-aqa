@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="2.004">
-  <testsuite name="JSONPlaceholder API Tests" errors="0" failures="0" skipped="0" timestamp="2025-03-03T12:55:17" time="1.855" tests="5">
-    <testcase classname="JSONPlaceholder API Tests GET /users/1 returns correct data" name="JSONPlaceholder API Tests GET /users/1 returns correct data" time="0.266">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="2.125">
+  <testsuite name="JSONPlaceholder API Tests" errors="0" failures="0" skipped="0" timestamp="2025-03-03T13:31:47" time="1.974" tests="6">
+    <testcase classname="JSONPlaceholder API Tests GET /users/1 returns correct data" name="JSONPlaceholder API Tests GET /users/1 returns correct data" time="0.24">
     </testcase>
-    <testcase classname="JSONPlaceholder API Tests GET /users/1 returns correct data" name="JSONPlaceholder API Tests GET /users/1 returns correct data" time="0.035">
+    <testcase classname="JSONPlaceholder API Tests GET /users/1 returns correct data" name="JSONPlaceholder API Tests GET /users/1 returns correct data" time="0.033">
     </testcase>
-    <testcase classname="JSONPlaceholder API Tests GET /users/2 returns correct data" name="JSONPlaceholder API Tests GET /users/2 returns correct data" time="0.03">
+    <testcase classname="JSONPlaceholder API Tests GET /users/2 returns correct data" name="JSONPlaceholder API Tests GET /users/2 returns correct data" time="0.037">
     </testcase>
-    <testcase classname="JSONPlaceholder API Tests GET /users/3 returns correct data" name="JSONPlaceholder API Tests GET /users/3 returns correct data" time="0.035">
+    <testcase classname="JSONPlaceholder API Tests GET /users/3 returns correct data" name="JSONPlaceholder API Tests GET /users/3 returns correct data" time="0.033">
     </testcase>
-    <testcase classname="JSONPlaceholder API Tests POST Submit a new blog post" name="JSONPlaceholder API Tests POST Submit a new blog post" time="0.455">
+    <testcase classname="JSONPlaceholder API Tests POST Submit a new blog post" name="JSONPlaceholder API Tests POST Submit a new blog post" time="0.447">
+    </testcase>
+    <testcase classname="JSONPlaceholder API Tests POST Submit a new blog post(serialized and deserialized)" name="JSONPlaceholder API Tests POST Submit a new blog post(serialized and deserialized)" time="0.154">
     </testcase>
   </testsuite>
 </testsuites>
